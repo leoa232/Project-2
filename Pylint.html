@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #f1f1f1;
+}
+
+.header {
+  padding: 30px;
+  text-align: left;
+  background: black;
+}
+
+.header h1 {
+  font-size: 50px;
+  color: white;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: purple;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+</style>
+</head>
+<body>
+    <div class="header">
+        <h1>Learning Python</h1>
+      </div>
+      
+      <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="articles.html">Articles</a>
+
+
+            </div>
+
+          <h2 align=center>Pylint Tips</h2>
+
+         <p> Pylint provides a simple way to analyze Python code, and its high configurability is easy to make a unified code style. This article will explain how Pylint will specify the Python code through theoretical introduction and example analysis.
+
+Pylint is a Python Code Analysis Tool that analyzes the error in the Python code, finds code that does not meet the code style standard and potential problem.
+
+Pylint is a Python tool that provides more features in addition to the role of the usual code analysis tool: if the length of the code 
+line code is checked, whether the variable name meets the naming standard, and a declared interface is truly realized.</p>
+
+<p>
+  
+ <h3 align=center>How to Use Pylint to check a module Module.py:</h2>
+
+<br>1. Enter the folder where this module is located, run
+
+<br>pylint [options] module.py
+<br>This way of calling is always working because the current working directory is automatically added to the Python path.
+
+<br>2. Do not enter the folder where the module is located, run
+
+<br>pylint [options] directory/module.py
+<br>This call mode is when it is satisfied when it is satisfied: Directory is a python package (such as a __init__.py file), or Directory is added to the Python search path.
+ 
+
+<br>
+
+<h3 align=center>Use Pylint to code a package Pakage:</h3>
+
+<br>1. Enter the folder where this package is located, run
+
+<br>pylint [options] pakage
+<br>This way of calling is always working because the current working directory is automatically added to the Python path.
+
+<br>2. Do not enter the folder in the package, run
+
+<br>pylint [options] directory/ pakage
+<br>In this case, it is possible to satisfy the following conditions: Directory is added to the Python path. For example, on Linux, export pythonpath = $ pythonpath: Directory.
+
+<br>In addition, for the machine installed the Tkinter package, you can open a simple GUI interface using the command pylint-gui,
+<br>enter the module or package name (rule to the command line), click Run, Pylint's output will be displayed in the GUI.</p>
+
+
+            <h2 align=center>Glossary of Terms</h2>
+            <h4>Factory</h4>
+            <br>Factory Method is a creational design pattern 
+            used to create concrete implementations of a common
+            interface.It separates the process of creating an 
+            object from the code that depends on the interface 
+            of the object.
+            <h4>Class</h4> 
+            <br> A class is a code template for creating objects. 
+            Objects have member variables and have behaviour associated with them.
+             In python a class is created by the keyword class. 
+            An object is created using the constructor of the class. 
+            This object will then be called the instance of the class.
+            <h4>Namespace</h4>
+            <br> A namespace is a system that has a unique name for each and every object in Python.
+             An object might be a variable or a method.
+            <h4>Constructor</h4>
+            <br>Constructors are generally used for instantiating an object.
+             The task of constructors is to initialize(assign values) to the
+            data members of the class when an object of the class is created. 
+            <h4>Fixture</h4>
+            <br> Fixtures are functions, which will run before each test function to which it is applied.
+             Fixtures are used to feed some data to the tests such as database connections, URLs to test
+           and some sort of input data. 
+            <h4>Type Hint</h4> Type hints in Python involve a colon and a type declaration after the first invocation of a name in a namespace.
+            <h4>Type cast</h4> 
+            <br>In Python, we can convert one type of variable to another type. This conversion is called type casting
+            or type conversion.In casting, we convert variables declared in specific data types to the different data types.
+            <h4>Unit test</h4>
+            <br>
+            Unit testing is a software testing method by which individual units of 
+            source code are put under various tests to determine whether they are fit for use
+            <h4>Static</h4>
+            <br>
+            Static means, that the member is on a class level rather on the instance level.
+            Static variables exist only on class level and aren't instantiated.
+            If you change a static variable in one instance of the class, the change will affect its value in all other instances.
+            <h4>Class method</h4>
+            <br>
+            A class method is a method which is bound to the class and not the object of the class.
+             They have the access to the state of the class as it takes a class parameter that 
+             points to the class and not the object instance.
+            <h4>Facade</h4>
+            <br>
+            Facade is a structural design pattern that provides a basic interface to a complex system of classes, library or framework. 
+            While Facade decreases the overall complexity of the application, it also helps to move unwanted dependencies to one place.
+            <br>
+            <h4>Method</h4>
+            <br> A function is a block of code which only runs when it is called.
+            You can pass data, known as parameters, into a function.
+            A function can return data as a result.
+            <h4>Property</h4>
+            <br> The property() function is used to define properties in the Python class. 
+            The property() method in Python provides an interface to instance attributes.
+            It encapsulates instance attributes and provides a property,
