@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #f1f1f1;
+}
+
+.header {
+  padding: 30px;
+  text-align: left;
+  background: black;
+}
+
+.header h1 {
+  font-size: 50px;
+  color: white;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: purple;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+</style>
+</head>
+<body>
+    <div class="header">
+        <h1>Learning Python</h1>
+      </div>
+      
+      <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="articles.html">Articles</a>
+
+
+            </div>
+
+            <h2 align=center>Unit Testing</h2>
+            <p align=left> Essentially, a unit test is a method that instantiates a small portion of our 
+                application and verifies its behavior independently from other parts. 
+                A typical unit test contains 3 phases: First, it initializes a small piece of an 
+                application it wants to test (also known as the system under test, or SUT), then 
+                it applies some stimulus to the system under test (usually by calling a method on it), 
+                and finally, it observes the resulting behavior. If the observed behavior is consistent with
+                 the expectations, the unit test passes, otherwise, it fails, indicating that there is a
+                  problem somewhere in the system under test. These three unit test phases are also known as
+                   Arrange, Act and Assert, or simply AAA.</p>
+                 <img src="aa.png">
+
+                 <h2 align=center>AAA Testing: Arrange</h2>
+                 <h3>Steps to follow</h3>
+                 <p>                  
+                    <li>Use a single block of code with no empty lines.</li>
+                     <li>Do not use assert in the Arrange block. If you need to make an assertion about your arrangement, then this is a smell that your arrangement is too complicated and should be extracted to a fixture or setup function and tested in its own right.</li>
+                        <li>Only prepare non-deterministic results not available after action.</li>
+                            <li>The arrange section should not require comments. If you have a large arrangement in your tests which is complex enough to require detailed comments then consider:</li>
+                                <li>Extracting the comments into a multi-line docstring.</li>
+                                    <li> Extracting the arrangement code into a fixture and testing that the fixture is establishing the expected conditions as previously mentioned.</li>
+                                    </p>
+                                    <img src="arrange.png">
+                <br>
+                <h2 align=center>AAA Testing: Act</h2>
+                <h3>Steps to follow</h3>
+                <p>
+                    <li>Start every Action line with result =.</li>
+                    <li>Even when there is no result from the action, capture it with result = and then assert result is None. In this way, the SUT’s behaviour is pinned.
+
+                    </li>
+                    <li></li>
+                    <li>If you struggle to write a single line action, then consider extracting some of that code into your arrangement.
+
+                    </li>
+                    <li>The action can be wrapped in with ... raises for expected exceptions. In this case your action will be two lines surrounded by empty lines.
+
+                    </li>
+                    
+                 </p>
+                <img src="act.png">
+                
+                <br>
+                
+                <h2 align=center>AAA Testing: Assert</h2>
+                <h3>Steps to follow</h3>
+                <p>
+                    <li>Use a single block of code with no empty lines.
+                    </li>
+                    <li>First test result, then side effects.
+                    </li>
+                    <li>Limit the actions that you make in this block. Ideally, no actions should happen, but that is not always possible.
+                    </li>
+                    <li>Use simple blocks of assertions. If you find that you are repeatedly writing the same code to extract information from the SUT and perform assertions on it, then consider extracting an assertion helper.
+                    </li>
+                  
+                </p>
+                <img src="assert2.png">
+
+
+
+                
+
+                 
+                
+                </p>
