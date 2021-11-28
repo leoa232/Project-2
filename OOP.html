@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #f1f1f1;
+}
+
+.header {
+  padding: 30px;
+  text-align: left;
+  background: black;
+}
+
+.header h1 {
+  font-size: 50px;
+  color: white;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: purple;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+img {
+float: right; 
+margin: 5px;
+        }
+p {
+ text-align: justify;;
+
+</style>
+</head>
+<body>
+    <div class="header">
+        <h1>Learning Python</h1>
+      </div>
+      
+      <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="articles.html">Articles</a>
+
+
+            </div>
+
+                <h2>Encapsulation</h2>
+               <p align=left>Encapsulation is one of the major concepts in object oriented programming. 
+                It describes the idea of blocking access to methods and attributes in a class. 
+                This will keep the complicated details out of the sight of the users, and 
+                prevent data from accidently being changed. In Python, this is achieved by 
+                using private methods or attributes using underscore as prefix ie 
+                single “_” or double “__”. For example in the calculator code we created several static methods. In order to ensure
+                these methods remained inaccessible, we needed to add the underscore. However, the singe underscore will not completely 
+                keep the method inaccessible. We need to have the double underscore. In order to get access to the double underscore attributes, we need to use getter and setter function to access it internally</p>
+                    <img src="Image11.jpg">
+
+                <h2>Inheritance</h2>
+                <p> Inheritance allows us to define a class that inherits all the methods and attributes from another class. 
+Convention denotes the new class as child class, and the one that it inherits from is called parent class or superclass. 
+If we refer back to the definition of class structure, we can see the structure for basic inheritance is 
+class ClassName(superclass), which means the new class can access all the attributes and methods from the superclass. 
+Inheritance builds a relationship between the child class and parent class, usually in a way that the parent class is 
+a general type while the child class is a specific type. In the calculator program, our parent class was Calculation.
+Some of the child classes included addition, subtraction, multiplication, and addition.</p>
+
+                <h2> Polymorphism </h2>
+                    <p>Polymorphism is another fundamental aspect of OOP, which means multiple forms. Polymorphism enables us to use
+                         a single interface with various underlying forms such as data types or classes.
+                         For example, we can have commonly named methods across classes or child classes.
+                         This ability of using single name with many forms acting differently in different 
+                         situations greatly reduces our complexities. In the calculator program, we have several classes.
+                         Although the classes were different, they relied on similar methods. Polymorhism allows
+                         these classes to make use of the same methods.</p>
+                
+                         <h2>Abstraction</h2>
+               <p>In simple terms, abstraction hides the internal implementations of a process or method from the user. 
+                In this way, the user knows what they do but not how it is done. Abstraction is a bit different from
+                 the other pillars. Python does not grant abstract classes by default. Instead, Python comes with 
+                 a module that fits the base for Abstract Base classes (ABC). A method becomes abstract when 
+                 decorated with the keyword @abstractmethod. In the calculator program, there are many working components to achieve
+                 the calculator. Being able to keep the internal implementations from the users helps prevent the program from being 
+                 comprimised.</p>
+</div>
+          
+          </body>
+          </html>    
